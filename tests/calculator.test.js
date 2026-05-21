@@ -1,4 +1,4 @@
-const { add, subtract, multiply, divide,average } = require("../src/calculator");
+const { add, subtract, multiply, divide } = require("../src/calculator");
 
 describe("calculator", () => {
   test("adds two numbers", () => {
@@ -26,5 +26,4 @@ describe("calculator", () => {
     const expectedAverage = 3;
     expect(average(numbers)).toBe(expectedAverage);
   });
-
 });
