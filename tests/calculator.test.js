@@ -1,4 +1,4 @@
-const { add, subtract, multiply, divide } = require("../src/calculator");
+const { add, subtract, multiply, divide,average } = require("../src/calculator");
 
 describe("calculator", () => {
   test("adds two numbers", () => {
@@ -20,4 +20,11 @@ describe("calculator", () => {
   test("throws when dividing by zero", () => {
     expect(() => divide(10, 0)).toThrow("Cannot divide by zero");
   });
+
+  test("calculates the average of an array of numbers", () => {
+    const numbers = [1, 2, 3, 4, 5];
+    const expectedAverage = 3;
+    expect(average(numbers)).toBe(expectedAverage);
+  });
+
 });
