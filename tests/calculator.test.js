@@ -1,4 +1,10 @@
-const { add, subtract, multiply, divide,average } = require("../src/calculator");
+const {
+  add,
+  subtract,
+  multiply,
+  divide,
+  average,
+} = require("../src/calculator");
 
 describe("calculator", () => {
   test("adds two numbers", () => {
@@ -27,4 +33,8 @@ describe("calculator", () => {
     expect(average(numbers)).toBe(expectedAverage);
   });
 
+  // This test is expected to FAIL
+  test("intentionally fails addition test", () => {
+    expect(add(2, 3)).toBe(10);
+  });
 });
